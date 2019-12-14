@@ -19,9 +19,6 @@ require_once(CORE . '/init.php');
  **/
 if (!isset($content_width))
 {
-    /*
-     * Nếu biến $content_width chưa có dữ liệu thì gán giá trị cho nó
-     */
     $content_width = 620;
 }
 
@@ -30,9 +27,6 @@ if (!isset($content_width))
  **/
 if (!function_exists('thachpham_theme_setup'))
 {
-    /*
-     * Nếu chưa có hàm thachpham_theme_setup() thì sẽ tạo mới hàm đó
-     */
     function thachpham_theme_setup()
     {
 
