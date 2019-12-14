@@ -1,16 +1,7 @@
 <?php
-/**
- * @ Thiết lập các hằng dữ liệu quan trọng
- * @ THEME_URL = get_stylesheet_directory() - đường dẫn tới thư mục theme
- * @ CORE = thư mục /core của theme, chứa các file nguồn quan trọng.
- **/
+
 define('THEME_URL', get_stylesheet_directory());
 define('CORE', THEME_URL . '/core');
-
-/**
- * @ Load file /core/init.php
- * @ Đây là file cấu hình ban đầu của theme mà sẽ không nên được thay đổi sau này.
- **/
 
 require_once(CORE . '/init.php');
 
@@ -25,15 +16,6 @@ if (!isset($content_width))
 /**
  * @ Thiết lập các chức năng sẽ được theme hỗ trợ
  **/
-if (!function_exists('thachpham_theme_setup'))
-{
-    function thachpham_theme_setup()
-    {
-
-    }
-
-    add_action('init', 'thachpham_theme_setup');
-}
 
 if (!function_exists('lotus_theme_setup'))
 {
