@@ -74,12 +74,10 @@ if (!function_exists('lotus_theme_setup'))
             )
         );
 
-
         /*
         * Thêm chức năng title-tag để tự thêm <title>
         */
         add_theme_support('title-tag');
-
 
         /*
          * 		case 'custom-background':
