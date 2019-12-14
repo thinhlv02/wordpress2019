@@ -60,6 +60,56 @@ if (!function_exists('lotus_theme_setup'))
         * Thêm chức năng post thumbnail
         */
         add_theme_support('post-thumbnails');
+
+        /*
+        * Thêm chức năng post format
+        */
+        add_theme_support('post-formats',
+            array(
+                'image',
+                'video',
+                'gallery',
+                'quote',
+                'link'
+            )
+        );
+
+
+        /*
+        * Thêm chức năng title-tag để tự thêm <title>
+        */
+        add_theme_support('title-tag');
+
+
+        /*
+         * 		case 'custom-background':
+         */
+
+        $defaults_background = array(
+            'default-color' => '#e8e8e8'
+        );
+
+        add_theme_support('custom-background', $defaults_background);
+
+        /*
+        * Tạo menu cho theme
+        */
+        register_nav_menu('primary-menu', __('Primary Menu', 'lotus'));
+
+        /*
+        * Tạo sidebar cho theme
+        */
+        $sidebar = array(
+            'name' => __('Main Sidebar', 'lotus'),
+            'id' => 'main-sidebar',
+            'description' => 'Main sidebar for Lotus theme 121212',
+            'class' => 'main-sidebar',
+            'before_title' => '<h3 class="widgettitle">',
+            'after_title' => '</h3>'
+        );
+
+        register_sidebar($sidebar);
+
     }
 
     add_action('init', 'lotus_theme_setup');
