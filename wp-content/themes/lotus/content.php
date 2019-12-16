@@ -10,5 +10,7 @@
     </div>
     <div class="entry-content">
 
+        <?php lotus_entry_content(); ?>
+
     </div>
 </article>

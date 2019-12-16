@@ -252,3 +252,23 @@ if (!function_exists('lotus_entry_meta'))
         <?php
     }
 }
+
+//lotus_entry_content
+/**
+ * @ Hàm hiển thị nội dung của post type
+ * @ Hàm này sẽ hiển thị đoạn rút gọn của post ngoài trang chủ (the_excerpt)
+ * @ Nhưng nó sẽ hiển thị toàn bộ nội dung của post ở trang single (the_content)
+ * @ lotus_entry_content()
+ **/
+
+if (!function_exists('lotus_entry_content'))
+{
+    function lotus_entry_content()
+    {
+        if (!is_single())
+        {
+            echo the_excerpt();
+        }
+        else echo the_content();
+    }
+}
