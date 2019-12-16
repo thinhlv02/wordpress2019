@@ -178,8 +178,14 @@ if (!function_exists('lotus_pagination'))
 
 if (!function_exists('lotus_thumbnail'))
 {
-    function lotus_thumbnail()
+    function lotus_thumbnail($size)
     {
+        if (!is_single() && has_post_thumbnail() && !post_password_required() || has_post_format('image')) : ?>
+            <figure class="post-thumbnail"><?php the_post_thumbnail($size); ?></figure>
+
+        <?php endif; ?>
+
+        <?php
 
     }
 }

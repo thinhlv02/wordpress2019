@@ -1,7 +1,7 @@
 <article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
     <div class="entry-thumbnail">
 
-        <?php lotus_thumbnail(); ?>
+        <?php lotus_thumbnail('thumbnail'); ?>
 
     </div>
 
