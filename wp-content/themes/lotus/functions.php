@@ -146,12 +146,22 @@ if (!function_exists('lotus_pagination'))
 {
     function lotus_pagination()
     {
+//        echo $GLOBALS['wp_query']->max_num_pages ;
         if ($GLOBALS['wp_query']->max_num_pages < 2)
         {
             return '';
         } ?>
-        <?php echo $GLOBALS['wp_query']->max_num_pages ?>
+        <!--        --><?php //echo $GLOBALS['wp_query']->max_num_pages
+        ?>
         <nav class="pagination" role="navigation">
+
+            <?php if (get_next_posts_link()): ?>
+                <div class="next"><?php next_posts_link(__('Older Posts', 'lotus')); ?></div>
+            <?php endif; ?>
+
+            <?php if (get_previous_posts_link()): ?>
+                <div class="pre"><?php previous_posts_link(__('Newer Posts', 'lotus')); ?></div>
+            <?php endif; ?>
 
         </nav>
         <?php
