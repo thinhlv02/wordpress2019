@@ -146,6 +146,15 @@ if (!function_exists('lotus_pagination'))
 {
     function lotus_pagination()
     {
+        if ($GLOBALS['wp_query']->max_num_pages < 2)
+        {
+            return '';
+        } ?>
+        <?php echo $GLOBALS['wp_query']->max_num_pages ?>
+        <nav class="pagination" role="navigation">
+
+        </nav>
+        <?php
 
     }
 }
