@@ -115,3 +115,22 @@ if (!function_exists('lotus_header'))
         <?php
     }
 }
+
+/*--------
+Function menu nav in header view */
+
+if (!function_exists('lotus_menu'))
+{
+    function lotus_menu($args) // arguments list // danh sach doi so
+    {
+        $args = array(
+            'theme_location' => $args,
+            'container' => 'nav',
+            'container_class' => $args
+        );
+
+        wp_nav_menu($args);
+
+    }
+
+}

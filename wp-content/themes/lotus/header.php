@@ -15,5 +15,6 @@
 <div id="container"
 
 <div class="logo">
-    <?php echo  lotus_header(); ?>
+    <?php lotus_header(); ?>
+    <?php lotus_menu('primary-menu'); ?>
 </div>
