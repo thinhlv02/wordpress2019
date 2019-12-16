@@ -202,6 +202,7 @@ if (!function_exists('lotus_entry_header'))
     function lotus_entry_header()
     {
 
+
     }
 }
 
@@ -214,6 +215,13 @@ if (!function_exists('lotus_entry_meta'))
 {
     function lotus_entry_meta()
     {
+        ?>
+        <?php if (is_single()): ?>
+        <h1><a href="<?php the_permalink(); ?>" title="<?php the_title() ?>"><?php the_title(); ?></a></h1>
+    <?php else: ?>
+        <h2><a href="<?php the_permalink(); ?>" title="<?php the_title() ?>"><?php the_title(); ?></a></h2>
+    <?php endif; ?>
 
+        <?php
     }
 }
