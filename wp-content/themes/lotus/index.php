@@ -1,2 +1,3 @@
 <?php
-echo 'hello index';
+//echo 'hello index';
+get_header();
