@@ -135,3 +135,17 @@ if (!function_exists('lotus_menu'))
     }
 
 }
+
+/**
+ * @ Tạo hàm phân trang cho index, archive.
+ * @ Hàm này sẽ hiển thị liên kết phân trang theo dạng chữ: Newer Posts & Older Posts
+ * @ lotus_pagination()
+ **/
+
+if (!function_exists('lotus_pagination'))
+{
+    function lotus_pagination()
+    {
+
+    }
+}
