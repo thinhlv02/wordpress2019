@@ -270,5 +270,8 @@ if (!function_exists('lotus_entry_content'))
             echo the_excerpt();
         }
         else echo the_content();
+
+        //pagination for all posts
+        #code here
     }
 }
