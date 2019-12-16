@@ -87,4 +87,5 @@ if (!function_exists('lotus_theme_setup'))
     }
 
     add_action('init', 'lotus_theme_setup');
+
 }
