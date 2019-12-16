@@ -210,7 +210,6 @@ if (!function_exists('lotus_entry_header'))
         <?php endif; ?>
 
         <?php
-
     }
 }
 
