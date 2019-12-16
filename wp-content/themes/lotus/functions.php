@@ -105,7 +105,7 @@ if (!function_exists('lotus_header'))
             }
             else
             {
-                printf('<h5><a href="%1$s", title="%2$s">%3$s</a></h5>', get_bloginfo('url'), get_bloginfo('description'), get_bloginfo('url'));
+                printf('<p><a href="%1$s", title="%2$s">%3$s</a></p>', get_bloginfo('url'), get_bloginfo('description'), get_bloginfo('url'));
             }
             ?>
         </div>
