@@ -168,3 +168,18 @@ if (!function_exists('lotus_pagination'))
 
     }
 }
+
+/**
+ * @ Hàm hiển thị ảnh thumbnail của post.
+ * @ Ảnh thumbnail sẽ không được hiển thị trong trang single
+ * @ Nhưng sẽ hiển thị trong single nếu post đó có format là Image
+ * @ lotus_thumbnail( $size )
+ **/
+
+if (!function_exists('lotus_thumbnail'))
+{
+    function lotus_thumbnail()
+    {
+
+    }
+}
