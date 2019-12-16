@@ -69,7 +69,7 @@ if (!function_exists('lotus_theme_setup'))
         * Tạo menu cho theme
         */
         register_nav_menu('primary-menu', __('Primary Menu', 'lotus'));
-        register_nav_menu('thinhlv-menu', __('Thinhlv Menu', 'lotus'));
+        register_nav_menu('land-menu', __('Land Menu', 'land'));
 
         /*
         * Tạo sidebar cho theme
