@@ -89,3 +89,29 @@ if (!function_exists('lotus_theme_setup'))
     add_action('init', 'lotus_theme_setup');
 
 }
+
+/*------------
+TEMPLATE FUNCTIONS */
+
+if (!function_exists('lotus_header'))
+{
+    function lotus_header()
+    { ?>
+        <div class="site-name">
+            <?php
+            if (is_home())
+            {
+                printf('<h1><a href="%1$s", title="%2$s">%3$s</a></h1>', get_bloginfo('url'), get_bloginfo('description'), get_bloginfo('url'));
+            }
+            else
+            {
+                printf('<h5><a href="%1$s", title="%2$s">%3$s</a></h5>', get_bloginfo('url'), get_bloginfo('description'), get_bloginfo('url'));
+            }
+            ?>
+        </div>
+
+        <div class="site-description"><?php echo bloginfo('description'); ?></div>
+
+        <?php
+    }
+}
