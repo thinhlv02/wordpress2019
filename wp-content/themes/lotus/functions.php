@@ -265,13 +265,25 @@ if (!function_exists('lotus_entry_content'))
 {
     function lotus_entry_content()
     {
-        if (!is_single())
-        {
-            echo the_excerpt();
-        }
-        else echo the_content();
+        if (!is_single()):
 
-        //pagination for all posts
-        #code here
+            echo the_excerpt();
+
+        else : the_content();
+
+            /*
+            * Code hiển thị phân trang trong post type
+            */
+            $args = array(
+
+                'before' => __('<p>Page:', 'lotus'),
+                'after' => '</p>',
+                'nextpagelink' => __('Next page', 'lotus'),
+                'previouspagelink' => __('Previous page', 'lotus')
+            );
+
+            wp_link_pages($args);
+
+        endif;
     }
 }
