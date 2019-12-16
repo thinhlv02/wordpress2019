@@ -12,9 +12,9 @@
 
 <body <?php body_class(); ?>
 <!--start container-->
-    <div id="container"
+<div id="container"
 
-        <div class="logo">
-            <?php lotus_header(); ?>
-            <?php lotus_menu('primary-menu'); ?>
-        </div>
+<div class="logo">
+    <?php lotus_header(); ?>
+    <?php lotus_menu('primary-menu'); ?>
+</div>
