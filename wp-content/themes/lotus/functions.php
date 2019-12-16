@@ -181,6 +181,7 @@ if (!function_exists('lotus_thumbnail'))
     function lotus_thumbnail($size)
     {
         if (!is_single() && has_post_thumbnail() && !post_password_required() || has_post_format('image')) : ?>
+
             <figure class="post-thumbnail"><?php the_post_thumbnail($size); ?></figure>
 
         <?php endif; ?>
@@ -203,10 +204,10 @@ if (!function_exists('lotus_entry_header'))
     {
         if (is_single()): ?>
             <h1 class="entry-title">
-                <a href="<?php the_permalink(); ?>" title="<?php the_title() ?>"><?php the_title(); ?></a></h1>
+                <a href="<?php the_permalink(); ?>" title="<?php the_title(); ?>"><?php the_title(); ?></a></h1>
         <?php else: ?>
             <h2 class="entry-title">
-                <a href="<?php the_permalink(); ?>" title="<?php the_title() ?>"><?php the_title(); ?></a></h2>
+                <a href="<?php the_permalink(); ?>" title="<?php the_title(); ?>"><?php the_title(); ?></a></h2>
         <?php endif; ?>
 
         <?php
