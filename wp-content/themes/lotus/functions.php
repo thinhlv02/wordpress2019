@@ -189,3 +189,31 @@ if (!function_exists('lotus_thumbnail'))
 
     }
 }
+
+/**
+ * @ Hàm hiển thị tiêu đề của post trong .entry-header
+ * @ Tiêu đề của post sẽ là nằm trong thẻ <h1> ở trang single
+ * @ Còn ở trang chủ và trang lưu trữ, nó sẽ là thẻ <h2>
+ * @ lotus_entry_header()
+ **/
+
+if (!function_exists('lotus_entry_header'))
+{
+    function lotus_entry_header()
+    {
+
+    }
+}
+
+/**
+ * @ Hàm hiển thị thông tin của post (Post Meta)
+ * @ lotus_entry_meta()
+ **/
+
+if (!function_exists('lotus_entry_meta'))
+{
+    function lotus_entry_meta()
+    {
+
+    }
+}

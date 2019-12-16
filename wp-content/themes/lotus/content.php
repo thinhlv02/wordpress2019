@@ -7,6 +7,10 @@
 
     <div class="entry-title ">
 
+        <?php lotus_entry_header(); ?>
+
+        <?php lotus_entry_meta(); ?>
+
     </div>
 
     <div class="entry-content">
