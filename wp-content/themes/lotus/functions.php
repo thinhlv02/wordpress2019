@@ -223,13 +223,7 @@ if (!function_exists('lotus_entry_meta'))
 {
     function lotus_entry_meta()
     {
-        if (!is_page()) : ?>
-            <div class="entry-meta">
-                <?php
 
-                ?>
-            </div>
-        <?php endif;
     }
 }
 //lotus_entry_content
