@@ -297,7 +297,7 @@ add_filter('excerpt_more', 'lotus_readmore');
 
 /**
  * @ Hàm hiển thị tag của post
- * @ thachpham_entry_tag()
+ * @ lotus_entry_tag()
  **/
 
 if (!function_exists('lotus_entry_tag'))
