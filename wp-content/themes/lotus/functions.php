@@ -247,7 +247,7 @@ if (!function_exists('lotus_entry_meta'))
         <?php endif;
     }
 }
-//lotus_entry_content
+
 /**
  * @ Hàm hiển thị nội dung của post type
  * @ Hàm này sẽ hiển thị đoạn rút gọn của post ngoài trang chủ (the_excerpt)
