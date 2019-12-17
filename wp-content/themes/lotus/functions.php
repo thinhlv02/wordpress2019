@@ -226,14 +226,11 @@ if (!function_exists('lotus_entry_meta'))
         if (!is_page()) : ?>
             <div class="entry-meta">
                 <?php
-                printf(__('<span class="author">Posted by %1$s ', 'lotus'),
-                    get_the_author());
+                printf(__('<span class="author">Posted by %1$s ', 'lotus'), get_the_author());
 
-                printf(__('<span class="date-published"> at %1$s', 'lotus'),
-                    get_the_date());
+                printf(__('<span class="date-published"> at %1$s', 'lotus'), get_the_date());
 
-                printf(__('<span class="category"> in %1$s ', 'lotus'),
-                    get_the_category_list(','));
+                printf(__('<span class="category"> in %1$s ', 'lotus'), get_the_category_list(','));
 
                 if (comments_open()) :
                     echo '<span class="meta-reply">';
