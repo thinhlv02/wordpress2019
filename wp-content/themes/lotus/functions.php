@@ -227,8 +227,6 @@ if (!function_exists('lotus_entry_meta'))
             <div class="entry-meta">
                 <?php
                 // Hiển thị tên tác giả, tên category và ngày tháng đăng bài
-                // Hiển thị tên tác giả, tên category và ngày tháng đăng bài
-                // Hiển thị tên tác giả, tên category và ngày tháng đăng bài
                 printf(__('<span class="author">Posted by %1$s</span>', 'lotus'), get_the_author());
                 printf(__('<span class="date-published"> at %1$s</span>', 'lotus'), get_the_date());
                 printf(__('<span class="category"> in %1$s </span>', 'lotus'), get_the_category_list(', '));
