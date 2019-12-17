@@ -226,9 +226,22 @@ if (!function_exists('lotus_entry_meta'))
         if (!is_page()) : ?>
             <div class="entry-meta">
                 <?php
+                // Hiển thị tên tác giả, tên category và ngày tháng đăng bài
                 printf(__('<span class="author">Posted by %1$s</span>', 'lotus'), get_the_author());
                 printf(__('<span class="date-published"> at %1$s</span>', 'lotus'), get_the_date());
-                printf(__('<span class="category"> in %1$s</span>', 'lotus'), get_the_category_list(', '));
+                printf(__('<span class="category"> in %1$s </span>', 'lotus'), get_the_category_list(', '));
+
+                // Hiển thị số đếm lượt bình luận
+                if (comments_open()):
+                    echo '<span class="meta-reply">';
+                    comments_popup_link(
+                        __('Leave a comment', 'lotus'),
+                        __('One comment', 'lotus'),
+                        __('% comments', 'lotus'),
+                        __('Read all comments', 'lotus')
+                    );
+                    echo '</span>';
+                endif;
                 ?>
             </div>
         <?php endif;
