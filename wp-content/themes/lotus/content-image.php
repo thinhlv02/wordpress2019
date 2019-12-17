@@ -5,6 +5,15 @@
 
     <div class="entry-header">
         <?php lotus_entry_header(); ?>
+        <?php
+        /*
+        * Đếm số lượng attachment có trong post
+        */
+        $attachments = get_children(array('post_parent' => $post->ID));
+        $attachment_number = count($attachments);
+        //        var_dump($attachment_number);
+        printf(__('This image post contains %1$s photos', 'lotus'), $attachment_number);
+        ?>
     </div>
 
     <div class="entry-content">
