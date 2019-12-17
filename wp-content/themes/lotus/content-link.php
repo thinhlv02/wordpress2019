@@ -14,23 +14,19 @@
         /*
          * Hiển thị tiêu đề có link trỏ tới link gắn trong custom field
          */
-        if (is_single())
-        {
+        if (is_single()) :
             printf('<h1 class="entry-title"><a href="%1$s" target="blank">%2$s</a></h1>', $link, get_the_title());
-        }
-        else
-        {
+        else:
             printf('<h2 class="entry-title"><a href="%1$s" target="blank">%2$s</a></h2>', $link, get_the_title());
-        }
-
+        endif;
         ?>
     </div>
 
     <div class="entry-content">
         <?php
         printf('<a href="%1$s" target="blank">%2$s</a>', $link, $link_description);
-        ?>
-        <?php is_single() ? lotus_entry_tag() : ''; ?>
+
+        is_single() ? lotus_entry_tag() : ''; ?>
     </div>
 
 </article>
