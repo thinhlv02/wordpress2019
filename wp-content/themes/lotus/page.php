@@ -1,5 +1,5 @@
 <?php
-echo 'hello Main page';
+echo '<h1>hello Main page</h1>';
 
 //start page
 get_header(); ?>
