@@ -269,20 +269,6 @@ if (!function_exists('lotus_entry_content'))
             * Code hiển thị phân trang trong post type
             */
 
-            $defaults = array(
-                'before' => '<p class="post-nav-links">' . __('Pages:'),
-                'after' => '</p>',
-                'link_before' => '',
-                'link_after' => '',
-                'aria_current' => 'page',
-                'next_or_number' => 'number',
-                'separator' => ' ',
-                'nextpagelink' => __('Next page'),
-                'previouspagelink' => __('Previous page'),
-                'pagelink' => '%',
-                'echo' => 1,
-            );
-
             $args = array(
                 'before' => __('<p>Page:', 'lotus'),
                 'after' => '</p>',
