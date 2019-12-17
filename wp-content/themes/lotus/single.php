@@ -1,5 +1,5 @@
 <?php
-//echo 'hello index';
+echo '<h1>hello Main Single</h1>';
 //bloginfo('description');
 
 get_header(); ?>
