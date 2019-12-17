@@ -309,6 +309,5 @@ if (!function_exists('lotus_entry_tag'))
             printf(__('Tagged in %1$s', 'lotus'), get_the_tag_list('', ', '));
             echo '</div>';
         endif;
-
     }
 }
