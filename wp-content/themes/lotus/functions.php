@@ -268,6 +268,9 @@ if (!function_exists('lotus_entry_content'))
             /*
             * Code hiển thị phân trang trong post type
             */
+            //            <!--nextpage-->
+            //phân trang nhé
+            //            <!--nextpage-->
 
             $args = array(
                 'before' => __('<p>Page:', 'lotus'),
