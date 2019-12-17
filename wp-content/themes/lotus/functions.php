@@ -223,7 +223,15 @@ if (!function_exists('lotus_entry_meta'))
 {
     function lotus_entry_meta()
     {
-
+        if (!is_page()) : ?>
+            <div class="entry-meta">
+                <?php
+                printf(__('<span class="author">Posted by %1$s</span>', 'lotus'), get_the_author());
+                printf(__('<span class="date-published"> at %1$s</span>', 'lotus'), get_the_date());
+                printf(__('<span class="category"> in %1$s</span>', 'lotus'), get_the_category_list(', '));
+                ?>
+            </div>
+        <?php endif;
     }
 }
 //lotus_entry_content
