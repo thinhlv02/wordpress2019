@@ -12,7 +12,7 @@ get_header(); ?>
 
                 <?php get_template_part('content', get_post_format()); ?>
 
-                <?php get_template_part( 'author-bio' ); ?>
+                <?php get_template_part('author-bio'); ?>
                 <?php comments_template(); ?>
 
             <?php endwhile; ?>

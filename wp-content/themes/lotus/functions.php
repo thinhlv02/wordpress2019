@@ -259,7 +259,8 @@ if (!function_exists('lotus_entry_content'))
 {
     function lotus_entry_content()
     {
-        if (!is_single()):
+
+        if (!is_single() && !is_page()):
 
             echo the_excerpt();
 
