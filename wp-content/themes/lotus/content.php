@@ -11,5 +11,6 @@
 
     <div class="entry-content">
         <?php lotus_entry_content(); ?>
+        <?php is_single() ? lotus_entry_tag() : ''; ?>
     </div>
 </article>

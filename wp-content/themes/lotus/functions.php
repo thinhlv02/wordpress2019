@@ -284,3 +284,31 @@ if (!function_exists('lotus_entry_content'))
         endif;
     }
 }
+
+/*
+ * Thêm chữ Read More vào excerpt
+ */
+function lotus_readmore()
+{
+    return '...<a class="read-more" href="' . get_permalink(get_the_ID()) . '">' . __('Read More12', 'lotus') . '</a>';
+}
+
+add_filter('excerpt_more', 'lotus_readmore');
+
+/**
+ * @ Hàm hiển thị tag của post
+ * @ thachpham_entry_tag()
+ **/
+
+if (!function_exists('lotus_entry_tag'))
+{
+    function lotus_entry_tag()
+    {
+        if (has_tag()) :
+            echo '<div class="entry-tag">';
+            printf(__('Tagged in %1$s', 'lotus'), get_the_tag_list('', ', '));
+            echo '</div>';
+        endif;
+
+    }
+}
