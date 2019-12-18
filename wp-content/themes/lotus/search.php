@@ -10,6 +10,13 @@ get_header(); ?>
 
             <div class="search-info">
                 <?php
+
+                /**
+                 * Trong đoạn trên, mình tạo ra một biến $search_query với query tùy chỉnh thông qua class WP_Query,
+                 * trong đó là mình sẽ có tham số lấy bài theo từ khóa tìm kiếm (tham số s) và số lượng bài cần hiển là
+                 * không giới hạn (tham số showposts với giá trị -1).
+                 */
+
                 $search_query = new WP_Query('s=' . $s . '&shoposts=-1');
                 $search_keyword = wp_specialchars($s, 1);
                 $search_count = $search_query->post_count;
