@@ -312,3 +312,21 @@ if (!function_exists('lotus_entry_tag'))
         endif;
     }
 }
+
+/**
+ * @ Chèn CSS và Javascript vào theme
+ * @ sử dụng hook wp_enqueue_scripts() để hiển thị nó ra ngoài front-end
+ **/
+function lotus_styles()
+{
+    /*
+     * Hàm get_stylesheet_uri() sẽ trả về giá trị dẫn đến file style.css của theme
+     * Nếu sử dụng child theme, thì file style.css này vẫn load ra từ theme mẹ
+     */
+    //thêm vào bộ nhớ
+    wp_register_style('main-style', get_template_directory_uri() . '/style.css', 'all');
+    //gọi nó ra
+    wp_enqueue_style('main-style');
+}
+
+add_action('wp_enqueue_scripts', 'lotus_styles');
