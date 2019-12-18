@@ -129,3 +129,10 @@ table, table tr, table td {
     font-size: 1.04em;
     font-style: italic;
 }
+
+/*---:[PRIMARY MENU]:---*/
+.primary-menu:after {
+    display: table;
+    content: " ";
+    clear: both;
+}
