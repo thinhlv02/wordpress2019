@@ -338,8 +338,9 @@ function lotus_style()
     wp_enqueue_style('main-style12');
 
     /** another ID of css**/
-
-
+    //reset css
+    wp_register_style('normalize-style', get_template_directory_uri() . '/normalize.css', 'all');
+    wp_enqueue_style('normalize-style');
 }
 
 add_action('wp_enqueue_scripts', 'lotus_style');
