@@ -329,8 +329,17 @@ function lotus_style()
      * Hàm get_stylesheet_uri() sẽ trả về giá trị dẫn đến file style.css của theme
      * Nếu sử dụng child theme, thì file style.css này vẫn load ra từ theme mẹ
      */
-    wp_register_style('main-style', get_template_directory_uri() . '/style.css', 'all');
-    wp_enqueue_style('main-style');
+    /** b1---------- để đăng ký file này vào danh sách “chờ gọi” của WordPress*/
+    /** -- Tham số all nghĩa là loại thiết bị có thể đọc được file CSS này (ví dụ như screen, all, print,…).*/
+
+    wp_register_style('main-style12', get_template_directory_uri() . '/style.css', 'all');
+
+    /** b2----------- để gọi nó ra giao diện */
+    wp_enqueue_style('main-style12');
+
+    /** another ID of css**/
+
+
 }
 
 add_action('wp_enqueue_scripts', 'lotus_style');
