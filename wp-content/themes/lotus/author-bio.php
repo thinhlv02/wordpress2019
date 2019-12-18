@@ -1,6 +1,6 @@
 <div class="entry-footer dcm121212">
     <div class="author-box">
-        <div class="autor-avatar">
+        <div class="author-avatar">
             <?php echo get_avatar(get_the_author_meta('ID')); ?>
         </div>
         <h3>
