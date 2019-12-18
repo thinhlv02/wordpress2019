@@ -327,6 +327,9 @@ function lotus_styles()
     wp_register_style('main-style', get_template_directory_uri() . '/style.css', 'all');
     //gọi nó ra
     wp_enqueue_style('main-style');
+
+    wp_register_style('reset-style', get_template_directory_uri() . '/reset.css', 'all');
+    wp_enqueue_style('reset-style');
 }
 
 add_action('wp_enqueue_scripts', 'lotus_styles');
