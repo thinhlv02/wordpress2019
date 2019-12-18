@@ -315,41 +315,22 @@ if (!function_exists('lotus_entry_tag'))
 }
 
 /**
+ * wp_register_style() để đăng ký file này vào danh sách “chờ gọi” của WordPress,
+ * sau đó dùng hàm wp_enqueue_sripts() để gọi nó ra giao diện một cách chuyên nghiệp hơn.
+ */
+
+/**
  * @ Chèn CSS và Javascript vào theme
  * @ sử dụng hook wp_enqueue_scripts() để hiển thị nó ra ngoài front-end
  **/
-function lotus_styles()
+function lotus_style()
 {
     /*
      * Hàm get_stylesheet_uri() sẽ trả về giá trị dẫn đến file style.css của theme
      * Nếu sử dụng child theme, thì file style.css này vẫn load ra từ theme mẹ
      */
-    //thêm vào bộ nhớ
     wp_register_style('main-style', get_template_directory_uri() . '/style.css', 'all');
-    //gọi nó ra
     wp_enqueue_style('main-style');
-
-    wp_register_style('reset-style', get_template_directory_uri() . '/reset.css', 'all');
-    wp_enqueue_style('reset-style');
-
-    /*
-  * Chèn các file CSS của SuperFish Menu
-  */
-    wp_register_style('superfish-css', get_template_directory_uri() . '/superfish.css', 'all');
-    wp_enqueue_style('superfish-css');
-
-    /*
-     * Chèn file JS của SuperFish Menu
-     */
-    wp_register_script('superfish-js', get_template_directory_uri() . '/superfish.js', array('jquery'));
-    wp_enqueue_script('superfish-js');
-
-    /*
-   * Chèn file JS custom.js
-   */
-    wp_register_script('custom-js', get_template_directory_uri() . '/custom.js', array('jquery'));
-    wp_enqueue_script('custom-js');
-
 }
 
-add_action('wp_enqueue_scripts', 'lotus_styles');
+add_action('wp_enqueue_scripts', 'lotus_style');
