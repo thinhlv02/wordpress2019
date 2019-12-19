@@ -103,3 +103,31 @@ table, table tr, table td {
     margin-left: 20px;
     padding-left: 20px;
 }
+
+/*---:[LOGO]---*/
+.logo {
+    margin-bottom: 30px;
+    line-height: 2;
+}
+
+.logo .site-name {
+}
+
+.logo .site-name h1 {
+    margin: 0;
+    font-size: 0;
+}
+
+.logo .site-name a {
+    color: rgb(0, 100, 212);
+    font-size: 32px;
+    font-weight: bold;
+}
+
+.logo .site-description {
+    margin-top: -1em;
+    color: rgb(111, 111, 111);
+    font-family: Time New Roman, serif;
+    font-size: 1.04em;
+    font-style: italic;
+}
