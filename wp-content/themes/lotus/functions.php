@@ -341,6 +341,22 @@ function lotus_style()
     //reset css
     wp_register_style('normalize-style', get_template_directory_uri() . '/normalize.css', 'all');
     wp_enqueue_style('normalize-style');
+
+    /***superfish menu*/
+    wp_register_style('superfish-style', get_template_directory_uri() . '/superfish.css', 'all');
+    wp_enqueue_style('superfish-style');
+
+    /**
+     * Chèn file JS của SuperFish Menu
+     */
+    wp_register_script('superfish-js', get_template_directory_uri() . '/superfish.js', array('jquery'));
+    wp_enqueue_script('superfish-js');
+
+    /**
+     * Chèn file JS custom.js
+     */
+    wp_register_script('custom-js', get_template_directory_uri() . '/custom.js', array('jquery'));
+    wp_enqueue_script('custom-js');
 }
 
 add_action('wp_enqueue_scripts', 'lotus_style');
