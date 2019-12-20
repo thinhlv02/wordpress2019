@@ -1,5 +1,5 @@
 <?php
-echo '<p>options.php</p>';
+//echo '<p>options.php</p>';
 /** create by thinhlv*/
 /** copy file from plugins/redux-framework/sample/barebones-config.php*/
 
