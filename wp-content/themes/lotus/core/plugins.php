@@ -13,7 +13,7 @@ function lotus_plugin_activation()
 
     // Thiet lap TGM
     $config = array(
-        'menu' => 'tp_plugin_install',
+        'menu' => 'tp_plugin_install',//http://wordpress2019.dev.com/wp-admin/themes.php?page=tp_plugin_install&plugin_status=install
         'has_notice' => true,
         'dismissable' => false,
         'is_automatic' => true
