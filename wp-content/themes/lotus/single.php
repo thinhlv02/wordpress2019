@@ -1,5 +1,5 @@
 <?php
-echo '<h1>hello Main Single</h1>';
+echo '<p style="text-align: center;">hello Main Single</p>';
 //bloginfo('description');
 
 get_header(); ?>

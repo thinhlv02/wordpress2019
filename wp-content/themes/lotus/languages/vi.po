@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "POT-Creation-Date: 2019-12-20 10:34+0700\n"
-"PO-Revision-Date: 2019-12-20 10:48+0700\n"
+"PO-Revision-Date: 2019-12-20 14:46+0700\n"
 "Last-Translator: \n"
 "Language-Team: \n"
 "Language: vi\n"
@@ -81,11 +81,11 @@ msgstr ""
 
 #: functions.php:160
 msgid "Older Posts"
-msgstr ""
+msgstr "Cũ hơn"
 
 #: functions.php:164
 msgid "Newer Posts"
-msgstr ""
+msgstr "Mới hơn"
 
 #: functions.php:231
 #, php-format
@@ -133,7 +133,7 @@ msgstr ""
 
 #: functions.php:295
 msgid "Read More12"
-msgstr ""
+msgstr "Đọc thêm"
 
 #: functions.php:311
 #, php-format
