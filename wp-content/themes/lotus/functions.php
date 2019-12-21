@@ -100,14 +100,25 @@ if (!function_exists('lotus_header'))
     { ?>
         <div class="site-name">
             <?php
-            if (is_home())
-            {
-                printf('<h1><a href="%1$s", title="%2$s">%3$s</a></h1>', get_bloginfo('url'), get_bloginfo('sitename'), get_bloginfo('sitename'));
-            }
-            else
-            {
-                printf('<p><a href="%1$s", title="%2$s">%3$s</a></p>', get_bloginfo('url'), get_bloginfo('description'), get_bloginfo('sitename12'));
-            }
+            //show logo on frondend if logo-on = 1
+            global $lt_options;
+            if ($lt_options['logo-on'] == 0):
+
+                if (is_home())
+                {
+                    printf('<h1><a href="%1$s", title="%2$s">%3$s</a></h1>', get_bloginfo('url'), get_bloginfo('sitename'), get_bloginfo('sitename'));
+                }
+                else
+                {
+                    printf('<p><a href="%1$s", title="%2$s">%3$s</a></p>', get_bloginfo('url'), get_bloginfo('description'), get_bloginfo('sitename12'));
+                }
+
+            else: ?>
+                <img src="<?php echo $lt_options['logo-image']['url'] ?>">
+            <?php
+
+            endif;
+
             ?>
         </div>
 
