@@ -248,6 +248,11 @@ Redux::setHelpSidebar($opt_name, $content);
  */
 
 // -> START Basic Fields
+
+/** add by thinhlv */
+
+/** add by thinhlv */
+
 Redux::setSection($opt_name, array(
     'title' => __('Basic Field', 'redux-framework-demo'),
     'id' => 'basic',
