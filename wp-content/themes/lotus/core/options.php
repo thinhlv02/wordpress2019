@@ -250,7 +250,24 @@ Redux::setHelpSidebar($opt_name, $content);
 // -> START Basic Fields
 
 /** add by thinhlv */
-
+Redux::setSection($opt_name, array(
+    'title' => __('Header', 'lotus'),
+    'id' => 'basic',
+    'desc' => __('All of settings for header on this theme.', 'lotus'),
+    'icon' => 'el el-home',
+    'fields' => array(
+        array(
+            'id' => 'logo-on',
+            'type' => 'switch',
+            'title' => __('Example Text', 'redux-framework-demo'),
+            'desc' => __('Example description.', 'redux-framework-demo'),
+            'subtitle' => __('Example subtitle.', 'redux-framework-demo'),
+            'hint' => array(
+                'content' => 'This is a <b>hint</b> tool-tip for the text field.<br/><br/>Add any HTML based text you like here.',
+            )
+        )
+    )
+));
 /** add by thinhlv */
 
 Redux::setSection($opt_name, array(
