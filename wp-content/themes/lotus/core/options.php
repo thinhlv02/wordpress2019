@@ -15,7 +15,8 @@ if (!class_exists('Redux'))
 }
 
 // This is your option name where all the Redux data is stored.
-$opt_name = "redux_demo";
+//$opt_name = "redux_demo";
+$opt_name = "lt_options";
 
 /**
  * ---> SET ARGUMENTS
@@ -254,18 +255,26 @@ Redux::setSection($opt_name, array(
     'title' => __('Header', 'lotus'),
     'id' => 'basic',
     'desc' => __('All of settings for header on this theme.', 'lotus'),
-    'icon' => 'el el-home',
+    'icon' => '', //'el el-home',
     'fields' => array(
         array(
             'id' => 'logo-on',
             'type' => 'switch',
-            'title' => __('Example Text', 'redux-framework-demo'),
-            'desc' => __('Example description.', 'redux-framework-demo'),
-            'subtitle' => __('Example subtitle.', 'redux-framework-demo'),
-            'hint' => array(
-                'content' => 'This is a <b>hint</b> tool-tip for the text field.<br/><br/>Add any HTML based text you like here.',
-            )
-        )
+            'title' => __('Enable Image Logo', 'lotus'),
+            'desc' => __('Do you want to use image as a logo?', 'lotus'),
+//            'subtitle' => __('Example subtitle.', 'redux-framework-demo'),
+//            'hint' => array(
+//                'content' => 'This is a <b>hint</b> tool-tip for the text field.<br/><br/>Add any HTML based text you like here.',
+//            )
+            'on' => __('Enabled', 'lotus'),
+            'off' => __('Disabled')
+        ),
+        array(
+            'id' => 'logo-image',
+            'type' => 'media',
+            'title' => __('Logo Image', 'lotus'),
+            'desc' => __('Image that you want to use as logo', 'lotus'),
+        ),
     )
 ));
 /** add by thinhlv */
