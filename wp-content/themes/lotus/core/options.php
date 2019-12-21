@@ -42,7 +42,7 @@ $args = array(
     'page_title' => __('Sample Options', 'redux-framework-demo'),
     // You will need to generate a Google API key to use this feature.
     // Please visit: https://developers.google.com/fonts/docs/developer_api#Auth
-    'google_api_key' => '',
+    'google_api_key' => 'AIzaSyDqo5394qbeerK9wl0tfywQVogvtxZ_3L4',
     // Set it you want google fonts to update weekly. A google_api_key value is required.
     'google_update_weekly' => false,
     // Must be defined to add google fonts to the typography module
@@ -251,6 +251,7 @@ Redux::setHelpSidebar($opt_name, $content);
 // -> START Basic Fields
 
 /** add by thinhlv */
+//logo
 Redux::setSection($opt_name, array(
     'title' => __('Header', 'lotus'),
     'id' => 'basic',
@@ -277,6 +278,35 @@ Redux::setSection($opt_name, array(
         ),
     )
 ));
+
+// set Typography
+Redux::setSection($opt_name, array(
+    'title' => __('Typography', 'lotus'),
+    'id' => 'basic',
+    'desc' => __('All of typography.', 'lotus'),
+    'icon' => 'el-icon-font',
+    'fields' => array(
+        array(
+            'id' => 'typo-main',
+            'type' => 'typography',
+            'title' => __('Main Typography', 'lotus'),
+//            'desc' => __('Example description Main Typography.', 'lotus'),
+//            'subtitle' => __('Example subtitle.', 'lotus'),
+//            'hint' => array(
+//                'content' => 'This is a <b>hint</b> tool-tip for the text field.<br/><br/>Add any HTML based text you like here.',
+//            )
+            'output' => array('body'),
+            'text-transform' => true,
+            'default' => array(
+                'font-size' => '14px',
+                'font-family' => 'Helvetica Neue, Arial, sans-serif',
+                'color' => '#333333',
+                'line-height' => '30px',
+            ),
+        )
+    )
+));
+
 /** add by thinhlv */
 
 Redux::setSection($opt_name, array(
