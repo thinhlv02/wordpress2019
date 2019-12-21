@@ -11,7 +11,7 @@ if (!class_exists('Redux'))
 }
 
 // This is your option name where all the Redux data is stored.
-$opt_name = "redux_demo";
+$opt_name = "lotus_demo";
 
 /**
  * ---> SET ARGUMENTS
@@ -244,6 +244,33 @@ Redux::setHelpSidebar($opt_name, $content);
  */
 
 // -> START Basic Fields
+// -> add by thinhlv
+Redux::setSection($opt_name, array(
+    'title' => __('Header', 'lotus'),
+    'id' => 'basic',
+    'desc' => __('All of settings for header on this theme.', 'lotus'),
+    'icon' => 'el el-home',
+    'fields' => array(
+        array(
+            'id' => 'opt-switch-logo',
+            'type' => 'switch',
+            'title' => __('Enable Image Logo', 'lotus'),
+            'desc' => __('Do you want to use image as a logo?', 'lotus'),
+            'subtitle' => __('Look, it is on!', 'lotus'),
+            'hint' => array(
+                'content' => 'This is a <b>hint</b> tool-tip for the text field.<br/><br/>Add any HTML based text you like here.',
+            )
+        ),
+        array(
+            'id' => 'opt-media-logo',
+            'type' => 'media',
+            'title' => __('Logo Image', 'lotus'),
+            'desc' => __('Image that you want to use as logo', 'lotus'),
+        ),
+    )
+));
+// -> End add by thinhlv
+
 Redux::setSection($opt_name, array(
     'title' => __('Basic Field', 'redux-framework-demo'),
     'id' => 'basic',

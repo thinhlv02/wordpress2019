@@ -101,8 +101,9 @@ if (!function_exists('lotus_header'))
         <div class="site-name">
             <?php
             //show logo on frondend if logo-on = 1
-            global $lt_options;
-            if ($lt_options['logo-on'] == 0):
+            global $lotus_demo;
+            //            var_dump($lotus_demo);
+            if ($lotus_demo['opt-switch-logo'] == 0):
 
                 if (is_home())
                 {
@@ -114,7 +115,7 @@ if (!function_exists('lotus_header'))
                 }
 
             else: ?>
-                <img src="<?php echo $lt_options['logo-image']['url'] ?>">
+                <img src="<?php echo $lotus_demo['opt-media-logo']['url'] ?>">
             <?php
 
             endif;
