@@ -246,8 +246,8 @@ Redux::setHelpSidebar($opt_name, $content);
 // -> START Basic Fields
 // -> add by thinhlv
 Redux::setSection($opt_name, array(
-    'title' => __('Header', 'lotus'),
-    'id' => 'basic',
+    'title' => __('Lotus theme option', 'lotus'),
+    'id' => 'basic-lotus',
     'desc' => __('All of settings for header on this theme.', 'lotus'),
     'icon' => 'el el-home',
     'fields' => array(
