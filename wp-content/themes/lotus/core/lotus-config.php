@@ -270,6 +270,32 @@ Redux::setSection($opt_name, array(
     )
 ));
 /**Typography*/
+Redux::setSection($opt_name, array(
+    'title' => __('Lotus option', 'lotus'),
+    'id' => 'basic-lotus',
+    'desc' => __('All of typography.', 'lotus'),
+    'icon' => 'el el-home',
+    'fields' => array(
+        array(
+            'id' => 'typo-main',
+            'type' => 'typography',
+            'title' => __('Typography', 'lotus'),
+            'google' => true,
+            'font-backup' => true,
+            'output' => array('body'),
+            'units' => 'px',
+            'subtitle' => __('Typography option with each property can be called individually.', 'lotus'),
+            'default' => array(
+                'color' => '#333',
+                'font-style' => '700',
+                'font-family' => 'Helvetica Neue, Arial, sans-serif',
+                'google' => true,
+                'font-size' => '14',
+                'line-height' => '30'
+            ),
+        )
+    )
+));
 
 /**End Typography*/
 
