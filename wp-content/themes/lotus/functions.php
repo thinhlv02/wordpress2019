@@ -304,7 +304,7 @@ if (!function_exists('lotus_entry_content'))
  */
 function lotus_readmore()
 {
-    return '...<a class="read-more" href="' . get_permalink(get_the_ID()) . '">' . __('Read More12', 'lotus') . '</a>';
+    return '...<a class="read-more" href="' . get_permalink(get_the_ID()) . '">' . __('Read More', 'lotus') . '</a>';
 }
 
 add_filter('excerpt_more', 'lotus_readmore');
