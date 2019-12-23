@@ -269,6 +269,10 @@ Redux::setSection($opt_name, array(
         ),
     )
 ));
+/**Typography*/
+
+/**End Typography*/
+
 // -> End add by thinhlv
 
 Redux::setSection($opt_name, array(
